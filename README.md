@@ -16,4 +16,3 @@ For now it includes topics like:
     - Objetcs
     - Iterators
     - Debugging
-    - 

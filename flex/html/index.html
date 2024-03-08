@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="images/favicon/site.webmanifest">
+    <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#fff">
+    <link rel="shortcut icon" href="images/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#fff">
+    <meta name="msapplication-config" content="images/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#fff">
+    <link rel="preload" as="font" href="fonts/font-regular.woff2" type="font/woff2" crossorigin>
+    <link rel="preload" as="font" href="fonts/font-semibold.woff2" type="font/woff2" crossorigin>
+    <link rel="preload" as="font" href="fonts/font-bold.woff2" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body class="o-wrapper-body">
+    <main class="o-wrapper c-main">
+        <h1 class="c-main__title">Flex </h1>
+        <div class="c-example">
+            <h2 class="c-example__title">display </h2>
+            <h3 class="c-example__subtitle">flex</h3>
+            <div class="c-example__container">
+                <div class="c-example__item">1</div>
+                <div class="c-example__item">2</div>
+                <div class="c-example__item">3</div>
+                <div class="c-example__item">4</div>
+            </div>
+            <h3 class="c-example__subtitle">inline-flex</h3>
+            <div class="c-example__container c-example__container--inline-flex">
+                <div class="c-example__item">1</div>
+                <div class="c-example__item">2</div>
+            </div>
+            <div class="c-example__container c-example__container--inline-flex">
+                <div class="c-example__item">1</div>
+                <div class="c-example__item">2</div>
+                <div class="c-example__item">3</div>
+            </div>
+        </div>
+        <div class="c-example">
+            <h2 class="c-example__title">flex-direction </h2>
+            <h3 class="c-example__subtitle">row</h3>
+            <div class="c-example__container">
+                <div class="c-example__item">1</div>
+                <div class="c-example__item">2</div>
+                <div class="c-example__item">3</div>
+                <div class="c-example__item">4</div>
+            </div>
+            <h3 class="c-example__subtitle">row-reverse</h3>
+            <div class="c-example__container c-example__container--row-reverse">
+                <div class="c-example__item">1</div>
+                <div class="c-example__item">2</div>
+                <div class="c-example__item">3</div>
+                <div class="c-example__item">4</div>
+            </div>
+            <h3 class="c-example__subtitle">column</h3>
+            <div class="c-example__container c-example__container--column">
+                <div class="c-example__item">1</div>
+                <div class="c-example__item">2</div>
+                <div class="c-example__item">3</div>
+            </div>
+            <h3 class="c-example__subtitle">column-reverse</h3>
+            <div class="c-example__container c-example__container--column-reverse">
+                <div class="c-example__item">1</div>
+                <div class="c-example__item">2</div>
+                <div class="c-example__item">3</div>
+            </div>
+        </div>
+        <div class="c-example">
+            <h2 class="c-example__title">flex-wrap</h2>
+            <h3 class="c-example__subtitle">nowrap</h3>
+            <div class="c-example__container">
+                <div class="c-example__item">1</div>
+                <div class="c-example__item">2</div>
+                <div class="c-example__item">3</div>
+                <div class="c-example__item">4</div>
+                <div class="c-example__item">5</div>
+                <div class="c-example__item">6</div>
+                <div class="c-example__item">7</div>
+                <div class="c-example__item">8</div>
+            </div>
+            <h3 class="c-example__subtitle">wrap</h3>
+            <div class="c-example__container c-example__container--wrap">
+                <div class="c-example__item">1</div>
+                <div class="c-example__item">2</div>
+                <div class="c-example__item">3</div>
+                <div class="c-example__item">4</div>
+                <div class="c-example__item">5</div>
+                <div class="c-example__item">6</div>
+                <div class="c-example__item">7</div>
+                <div class="c-example__item">8</div>
+            </div>
+            <h3 class="c-example__subtitle">wrap-reverse</h3>
+            <div class="c-example__container c-example__container--wrap-reverse">
+                <div class="c-example__item">1</div>
+                <div class="c-example__item">2</div>
+                <div class="c-example__item">3</div>
+                <div class="c-example__item">4</div>
+                <div class="c-example__item">5</div>
+                <div class="c-example__item">6</div>
+                <div class="c-example__item">7</div>
+                <div class="c-example__item">8</div>
+            </div>
+        </div>
+        <div class="c-example">
+            <h2 class="c-example__title">justify-content</h2>
+            <h3 class="c-example__subtitle">flex-start</h3>
+            <div class="c-example__container c-example__container--wrap">
+                <div class="c-example__item">1</div>
+                <div class="c-example__item">2</div>
+                <div class="c-example__item">3</div>
+                <div class="c-example__item">4</div>
+                <div class="c-example__item">5</div>
+                <div class="c-example__item">6</div>
+                <div class="c-example__item">7</div>
+                <div class="c-example__item">8</div>
+            </div>
+            <h3 class="c-example__subtitle">flex-end</h3>
+            <div class="c-example__container c-example__container--justify-flex-end c-example__container--wrap">
+                <div class="c-example__item">1</div>
+                <div class="c-example__item">2</div>
+                <div class="c-example__item">3</div>
+                <div class="c-example__item">4</div>
+                <div class="c-example__item">5</div>
+                <div class="c-example__item">6</div>
+                <div class="c-example__item">7</div>
+                <div class="c-example__item">8</div>
+            </div>
+            <h3 class="c-example__subtitle">center</h3>
+            <div class="c-example__container c-example__container--justify-center c-example__container--wrap">
+                <div class="c-example__item">1</div>
+                <div class="c-example__item">2</div>
+                <div class="c-example__item">3</div>
+                <div class="c-example__item">4</div>
+                <div class="c-example__item">5</div>
+                <div class="c-example__item">6</div>
+                <div class="c-example__item">7</div>
+                <div class="c-example__item">8</div>
+            </div>
+            <h3 class="c-example__subtitle">space-between</h3>
+            <div class="c-example__container c-example__container--justify-space-between c-example__container--wrap">
+                <div class="c-example__item">1</div>
+                <div class="c-example__item">2</div>
+                <div class="c-example__item">3</div>
+                <div class="c-example__item">4</div>
+                <div class="c-example__item">5</div>
+                <div class="c-example__item">6</div>
+                <div class="c-example__item">7</div>
+                <div class="c-example__item">8</div>
+            </div>
+            <h3 class="c-example__subtitle">space-around</h3>
+            <div class="c-example__container c-example__container--justify-space-around c-example__container--wrap">
+                <div class="c-example__item">1</div>
+                <div class="c-example__item">2</div>
+                <div class="c-example__item">3</div>
+                <div class="c-example__item">4</div>
+                <div class="c-example__item">5</div>
+                <div class="c-example__item">6</div>
+                <div class="c-example__item">7</div>
+                <div class="c-example__item">8</div>
+            </div>
+            <h3 class="c-example__subtitle">space-evenly</h3>
+            <div class="c-example__container c-example__container--justify-space-evenly c-example__container--wrap">
+                <div class="c-example__item">1</div>
+                <div class="c-example__item">2</div>
+                <div class="c-example__item">3</div>
+                <div class="c-example__item">4</div>
+                <div class="c-example__item">5</div>
+                <div class="c-example__item">6</div>
+                <div class="c-example__item">7</div>
+                <div class="c-example__item">8</div>
+                <div class="c-example"> </div>
+            </div>
+        </div>
+        <h2 class="c-example__title">align-items<h3 class="c-example__subtitle">flex-start</h3>
+            <div class="c-example__container c-example__container--wrap c-example__container--fixed-height c-example__container--align-items-flex-start">
+                <div class="c-example__item">1</div>
+                <div class="c-example__item">2</div>
+                <div class="c-example__item">3</div>
+                <div class="c-example__item">4</div>
+                <div class="c-example__item">5</div>
+                <div class="c-example__item">6</div>
+                <div class="c-example__item">7</div>
+                <div class="c-example__item">8</div>
+            </div>
+            <h3 class="c-example__subtitle">flex-end</h3>
+            <div class="c-example__container c-example__container--wrap c-example__container--fixed-height c-example__container--align-items-flex-end">
+                <div class="c-example__item">1</div>
+                <div class="c-example__item">2</div>
+                <div class="c-example__item">3</div>
+                <div class="c-example__item">4</div>
+                <div class="c-example__item">5</div>
+                <div class="c-example__item">6</div>
+                <div class="c-example__item">7</div>
+                <div class="c-example__item">8</div>
+            </div>
+            <h3 class="c-example__subtitle">center</h3>
+            <div class="c-example__container c-example__container--wrap c-example__container--fixed-height c-example__container--align-items-center">
+                <div class="c-example__item">1</div>
+                <div class="c-example__item">2</div>
+                <div class="c-example__item">3</div>
+                <div class="c-example__item">4</div>
+                <div class="c-example__item">5</div>
+                <div class="c-example__item">6</div>
+                <div class="c-example__item">7</div>
+                <div class="c-example__item">8</div>
+            </div>
+            <h3 class="c-example__subtitle">stretch</h3>
+            <div class="c-example__container c-example__container--wrap c-example__container--fixed-height c-example__container--align-items-stretch">
+                <div class="c-example__item">1</div>
+                <div class="c-example__item">2</div>
+                <div class="c-example__item">3</div>
+                <div class="c-example__item">4</div>
+                <div class="c-example__item">5</div>
+                <div class="c-example__item">6</div>
+                <div class="c-example__item">7</div>
+                <div class="c-example__item">8</div>
+            </div>
+            <h3 class="c-example__subtitle">baseline</h3>
+            <div class="c-example__container c-example__container--wrap c-example__container--fixed-height c-example__container--align-items-baseline">
+                <div class="c-example__item" style="font-size: 12px">1</div>
+                <div class="c-example__item" style="font-size: 34px">2</div>
+                <div class="c-example__item" style="font-size: 60px">3</div>
+                <div class="c-example__item" style="font-size: 84px">4</div>
+                <div class="c-example__item" style="font-size: 27px">5</div>
+                <div class="c-example__item" style="font-size: 62px">6</div>
+                <div class="c-example__item" style="font-size: 32px">7</div>
+                <div class="c-example__item" style="font-size: 68px">8</div>
+            </div>
+        </h2>
+        <h2 class="c-example__title">align-content<h3 class="c-example__subtitle">normal</h3>
+            <div class="c-example__container c-example__container--wrap c-example__container--fixed-height c-example__container--align-content-normal">
+                <div class="c-example__item">1</div>
+                <div class="c-example__item">2</div>
+                <div class="c-example__item">3</div>
+                <div class="c-example__item">4</div>
+                <div class="c-example__item">5</div>
+                <div class="c-example__item">6</div>
+                <div class="c-example__item">7</div>
+                <div class="c-example__item">8</div>
+                <div class="c-example__item">9</div>
+                <div class="c-example__item">10</div>
+                <div class="c-example__item">11</div>
+                <div class="c-example__item">12</div>
+                <div class="c-example__item">13</div>
+                <div class="c-example__item">14</div>
+                <div class="c-example__item">15</div>
+            </div>
+            <h3 class="c-example__subtitle">flex-start</h3>
+            <div class="c-example__container c-example__container--wrap c-example__container--fixed-height c-example__container--align-content-flex-start">
+                <div class="c-example__item">1</div>
+                <div class="c-example__item">2</div>
+                <div class="c-example__item">3</div>
+                <div class="c-example__item">4</div>
+                <div class="c-example__item">5</div>
+                <div class="c-example__item">6</div>
+                <div class="c-example__item">7</div>
+                <div class="c-example__item">8</div>
+                <div class="c-example__item">9</div>
+                <div class="c-example__item">10</div>
+                <div class="c-example__item">11</div>
+                <div class="c-example__item">12</div>
+                <div class="c-example__item">13</div>
+                <div class="c-example__item">14</div>
+                <div class="c-example__item">15</div>
+            </div>
+            <h3 class="c-example__subtitle">flex-end</h3>
+            <div class="c-example__container c-example__container--wrap c-example__container--fixed-height c-example__container--align-content-flex-end">
+                <div class="c-example__item">1</div>
+                <div class="c-example__item">2</div>
+                <div class="c-example__item">3</div>
+                <div class="c-example__item">4</div>
+                <div class="c-example__item">5</div>
+                <div class="c-example__item">6</div>
+                <div class="c-example__item">7</div>
+                <div class="c-example__item">8</div>
+                <div class="c-example__item">9</div>
+                <div class="c-example__item">10</div>
+                <div class="c-example__item">11</div>
+                <div class="c-example__item">12</div>
+                <div class="c-example__item">13</div>
+                <div class="c-example__item">14</div>
+                <div class="c-example__item">15</div>
+            </div>
+            <h3 class="c-example__subtitle">center</h3>
+            <div class="c-example__container c-example__container--wrap c-example__container--fixed-height c-example__container--align-content-center">
+                <div class="c-example__item">1</div>
+                <div class="c-example__item">2</div>
+                <div class="c-example__item">3</div>
+                <div class="c-example__item">4</div>
+                <div class="c-example__item">5</div>
+                <div class="c-example__item">6</div>
+                <div class="c-example__item">7</div>
+                <div class="c-example__item">8</div>
+                <div class="c-example__item">9</div>
+                <div class="c-example__item">10</div>
+                <div class="c-example__item">11</div>
+                <div class="c-example__item">12</div>
+                <div class="c-example__item">13</div>
+                <div class="c-example__item">14</div>
+                <div class="c-example__item">15</div>
+            </div>
+            <h3 class="c-example__subtitle">stretch</h3>
+            <div class="c-example__container c-example__container--wrap c-example__container--fixed-height c-example__container--align-content-stretch">
+                <div class="c-example__item" style="height:auto">1</div>
+                <div class="c-example__item" style="height:auto">2</div>
+                <div class="c-example__item" style="height:auto">3</div>
+                <div class="c-example__item" style="height:auto">4</div>
+                <div class="c-example__item" style="height:auto">5</div>
+                <div class="c-example__item" style="height:auto">6</div>
+                <div class="c-example__item" style="height:auto">7</div>
+                <div class="c-example__item" style="height:auto">8</div>
+                <div class="c-example__item" style="height:auto">9</div>
+                <div class="c-example__item" style="height:auto">10</div>
+                <div class="c-example__item" style="height:auto">11</div>
+                <div class="c-example__item" style="height:auto">12</div>
+                <div class="c-example__item" style="height:auto">13</div>
+                <div class="c-example__item" style="height:auto">14</div>
+                <div class="c-example__item" style="height:auto">15</div>
+            </div>
+            <h3 class="c-example__subtitle">space-between</h3>
+            <div class="c-example__container c-example__container--wrap c-example__container--fixed-height c-example__container--align-content-space-between">
+                <div class="c-example__item">1</div>
+                <div class="c-example__item">2</div>
+                <div class="c-example__item">3</div>
+                <div class="c-example__item">4</div>
+                <div class="c-example__item">5</div>
+                <div class="c-example__item">6</div>
+                <div class="c-example__item">7</div>
+                <div class="c-example__item">8</div>
+                <div class="c-example__item">9</div>
+                <div class="c-example__item">10</div>
+                <div class="c-example__item">11</div>
+                <div class="c-example__item">12</div>
+                <div class="c-example__item">13</div>
+                <div class="c-example__item">14</div>
+                <div class="c-example__item">15</div>
+            </div>
+            <h3 class="c-example__subtitle">space-around</h3>
+            <div class="c-example__container c-example__container--wrap c-example__container--fixed-height c-example__container--align-content-space-around">
+                <div class="c-example__item">1</div>
+                <div class="c-example__item">2</div>
+                <div class="c-example__item">3</div>
+                <div class="c-example__item">4</div>
+                <div class="c-example__item">5</div>
+                <div class="c-example__item">6</div>
+                <div class="c-example__item">7</div>
+                <div class="c-example__item">8</div>
+                <div class="c-example__item">9</div>
+                <div class="c-example__item">10</div>
+                <div class="c-example__item">11</div>
+                <div class="c-example__item">12</div>
+                <div class="c-example__item">13</div>
+                <div class="c-example__item">14</div>
+                <div class="c-example__item">15</div>
+            </div>
+            <h3 class="c-example__subtitle">space-evenly</h3>
+            <div class="c-example__container c-example__container--wrap c-example__container--fixed-height c-example__container--align-content-space-evenly">
+                <div class="c-example__item">1</div>
+                <div class="c-example__item">2</div>
+                <div class="c-example__item">3</div>
+                <div class="c-example__item">4</div>
+                <div class="c-example__item">5</div>
+                <div class="c-example__item">6</div>
+                <div class="c-example__item">7</div>
+                <div class="c-example__item">8</div>
+                <div class="c-example__item">9</div>
+                <div class="c-example__item">10</div>
+                <div class="c-example__item">11</div>
+                <div class="c-example__item">12</div>
+                <div class="c-example__item">13</div>
+                <div class="c-example__item">14</div>
+                <div class="c-example__item">15</div>
+            </div>
+        </h2>
+    </main>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

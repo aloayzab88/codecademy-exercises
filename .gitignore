@@ -1,0 +1,8 @@
+node_modules
+*:Zone.Identifier
+source
+gulpfile.js
+package-lock.json
+package.json
+.ncurc.json
+pnpm-lock.yaml

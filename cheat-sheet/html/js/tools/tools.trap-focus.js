@@ -1,0 +1,2 @@
+function trapFocus(t){let e=$(t).find("select, input, textarea, button, a").filter(":visible"),n=e.first(),o=e.last();setTimeout((function(){n[0].focus()}),200),o.on("keydown",(function(t){"Tab"!==t.key||t.shiftKey||(t.preventDefault(),n[0].focus())})),n.on("keydown",(function(t){"Tab"===t.key&&t.shiftKey&&(t.preventDefault(),o[0].focus())}))}function unTrapFocus(t){t.focus()}
+//# sourceMappingURL=tools.trap-focus.js.map

@@ -1,0 +1,2 @@
+let links=$('a[href^="#"]:not(.has-dropdown)'),siteHeader=$(".c-site-header"),urlPage=window.location.href,idLink=$("#"+urlPage.split("#")[1]);links.length&&$(".o-wrapper-body").on("click",'a[href^="#"]:not(.has-dropdown)',(function(){var e=$(this).attr("href");$("html, body").animate({scrollTop:$(e).offset().top-siteHeader.outerHeight()-10})})),idLink.length&&$(window).on("load",(function(){$("html, body").animate({scrollTop:idLink.offset().top-siteHeader.outerHeight()-10})}));
+//# sourceMappingURL=tools.go-to-element.js.map

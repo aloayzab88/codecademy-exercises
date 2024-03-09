@@ -72,6 +72,10 @@ const findInvalidCards = array => array.filter(card => !validateCred(card));
 const removeDups = array => array.filter((element, index) => array.indexOf(element) === index);
 
 const idInvalidCardCompanies = cards => {
+    // Check if cards is a single array. If true transform cards in a nested arrays. Otherwise function won't wonk bacause it expect an array of arrays
+    if (typeof cards[0] === 'number') {
+        cards = [cards];
+    }
     
     // 5. Array for companies of invalid cards, this will return as many items are in the array
     // Again, I find using map easier that a for loop and push
@@ -109,3 +113,4 @@ console.log(`List of companies of invalid cards: ${idInvalidCardCompanies(invali
 // Testing 7.1 and 7.2, I have no ideas what 7.3 means.
 console.log(validateCred(4024007148607228));
 console.log(validateCred('4024007148607228a'));
+console.log(`List of companies of invalid cards: ${idInvalidCardCompanies(invalid1)}`);

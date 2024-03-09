@@ -30,7 +30,7 @@ const validateCred = card => {
     let copyCard = [];
 
     // If card is an array copy the card with spread operator, it easier that use forEach and push 😁
-    // 7.2If card is a string or numbers change it to string, split it to an array and change every item to a number with the + operator
+    // 7.2 If card is a string or numbers change it to string, split it to an array and change every item to a number with the + operator
     Array.isArray(card) ? copyCard = [...card] : copyCard = card.toString().split('').map(element => +element);
 
     // If there was a letter in the string that will return NaN on the previous .map()
@@ -41,11 +41,11 @@ const validateCred = card => {
     // 3.1 Reverse in place copyCard to iterate to the right, like any sane person will do 😋
     copyCard.reverse();
 
-    // index++ so we get the actual place of the element starting from a 1 index
     // 3.2 If element place is even duplicate it, if the result is greater than 9 substract 9
     // You could use if else statements but I find ternay operators easier to use
     // copyCard = copyCard.map((element, index) => index++ % 2 ? element*2 > 9 ? element*2 - 9 : element*2 : element);
     // Or you can use if else to undertand it better
+    // index++ so we get the actual place of the element starting from a 1 index
     copyCard = copyCard.map((element, index) => {
         if (index++ % 2) {
             element*= 2;
@@ -58,10 +58,10 @@ const validateCred = card => {
             return element;
         }
     });
-    // 3.3 Sum using reduce is easier than reasigning a variable like sum+= elemtn using a forEach
+    // 3.3 Sum using reduce is easier than reasigning a variable like sum+= element using a forEach
     const sum = copyCard.reduce((acc, current) => acc + current);
-    // 3.4 Again a ternay operator, but this one is easier to undertand 😌
-    return sum % 10 === 0 ? true : false;
+    // 3.4 Evalute to true or false
+    return sum % 10 === 0;
 }
 
 // 4. Using validateCred to filter invalid cards, notice the ! to negate the evaluation, otherwise we will be filtering the valid cards!

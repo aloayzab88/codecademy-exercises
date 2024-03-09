@@ -44,7 +44,20 @@ const validateCred = card => {
     // index++ so we get the actual place of the element starting from a 1 index
     // 3.2 If element place is even duplicate it, if the result is greater than 9 substract 9
     // You could use if else statements but I find ternay operators easier to use
-    copyCard = copyCard.map((element, index) => index++ % 2 ? element*2 > 9 ? element*2 - 9 : element*2 : element);
+    // copyCard = copyCard.map((element, index) => index++ % 2 ? element*2 > 9 ? element*2 - 9 : element*2 : element);
+    // Or you can use if else to undertand it better
+    copyCard = copyCard.map((element, index) => {
+        if (index++ % 2) {
+            element*= 2;
+            if (element > 9) {
+                return element-= 9;
+            } else {
+                return element;
+            }
+        } else {
+            return element;
+        }
+    });
     // 3.3 Sum using reduce is easier than reasigning a variable like sum+= elemtn using a forEach
     const sum = copyCard.reduce((acc, current) => acc + current);
     // 3.4 Again a ternay operator, but this one is easier to undertand 😌

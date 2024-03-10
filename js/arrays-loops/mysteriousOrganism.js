@@ -72,44 +72,44 @@ const pAequorFactory = (specimenNum, dna) => {
     }
 }
 
-// 6. We created a function that create pAequories until a given number is reach
-const createpAequoryUntil = number => {
-    // Just for fun let's see how many pAequories are created before the quota is reached
+// 6. We created a function that create pAequors until a given number is reach
+const createpAequorUntil = number => {
+    // Just for fun let's see how many pAequors are created before the quota is reached
     let survivedCount = 0, createdCount = 0;
-    const survivedpAequory = []
+    const survivedpAequor = []
 
     while (survivedCount < number) {
-        let pAequory = pAequorFactory(createdCount, mockUpStrand());
-        if (pAequory.willLikelySurvive()) {
-            survivedpAequory.push(pAequory);
+        let pAequor = pAequorFactory(createdCount, mockUpStrand());
+        if (pAequor.willLikelySurvive()) {
+            survivedpAequor.push(pAequor);
             survivedCount++;
         }
         createdCount++;
     }
 
     // This will be brutal, be aware.
-    console.log(`${createdCount} pAequory were created. ${createdCount - survivedCount} didn't make it.`)
+    console.log(`${createdCount} pAequors were created. ${createdCount - survivedCount} didn't make it.`)
 
-    return survivedpAequory;
+    return survivedpAequor;
 }
 
 // Tests
 
-const pAequoryA = pAequorFactory('a', mockUpStrand());
-const pAequoryB = pAequorFactory('b', mockUpStrand());
-console.log(pAequoryA);
-console.log(pAequoryB);
+const pAequorA = pAequorFactory('a', mockUpStrand());
+const pAequorB = pAequorFactory('b', mockUpStrand());
+console.log(pAequorA);
+console.log(pAequorB);
 // Check compareDNA method
-console.log(pAequoryA.compareDNA(pAequoryB));
+console.log(pAequorA.compareDNA(pAequorB));
 
-// Check if a pAequory will survive
-console.log(pAequoryA.willLikelySurvive());
+// Check if a pAequor will survive
+console.log(pAequorA.willLikelySurvive());
 
-// 7. Create 30 pAequories that can survive
-const pAequoriesSample = createpAequoryUntil(30);
+// 7. Create 30 pAequors that can survive
+const pAequorsSample = createpAequorUntil(30);
 
-// Print the array of apex pAequories
-console.log(pAequoriesSample.length);
+// Print the array of apex pAequors
+console.log(pAequorsSample.length);
 
 // Check complementStrand method
-console.log(pAequoryA.complementStrand());
+console.log(pAequorA.complementStrand());

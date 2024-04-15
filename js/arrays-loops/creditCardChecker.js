@@ -43,11 +43,19 @@ const validateCred = card => {
 
     // 3.2 If element place is even duplicate it, if the result is greater than 9 substract 9
     // You could use if else statements but I find ternay operators easier to use
-    // copyCard = copyCard.map((element, index) => index++ % 2 ? element*2 > 9 ? element*2 - 9 : element*2 : element);
+    // copyCard = copyCard.map((element, index) => !(++index % 2) ? element*2 > 9 ? element*2 - 9 : element*2 : element);
     // Or you can use if else to undertand it better
-    // index++ so we get the actual place of the element starting from a 1 index
+    /*
+        i = index, p = placement
+        i   p   %2
+        0   1   0   --> even index, odd placement
+        1   2   1   --> odd index, even placement
+        2   3   0   --> even index, odd placement
+        3   4   1   --> odd index, even placement
+        ...
+    */
     copyCard = copyCard.map((element, index) => {
-        if (index++ % 2) {
+        if (index % 2) {
             element*= 2;
             if (element > 9) {
                 return element-= 9;

@@ -1,6 +1,6 @@
 const words = ['gato', 'perro', 'elefante', 'jirafa', 'cocodrilo'];
 const otherWords = ['manzana', 'banana', 'naranja', 'uva'];
-console.log(otherWords.length);
+
 const longestWordLength = array => {
     let longestWord = '';
     for (const item of array) {

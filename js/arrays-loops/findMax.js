@@ -12,3 +12,8 @@ const findMax = arr => {
 
 console.log(findMax(numbers));
 console.log(findMax(otherNumbers));
+
+const findMaxReduce = arr => arr.reduce((prev, next) => prev < next ? next : prev);
+
+console.log(findMaxReduce(numbers));
+console.log(findMaxReduce(otherNumbers));

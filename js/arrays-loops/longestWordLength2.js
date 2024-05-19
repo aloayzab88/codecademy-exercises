@@ -10,3 +10,11 @@ const longestWordLength = string => {
 
 console.log(longestWordLength('Hola cómo estás'));
 console.log(longestWordLength('La programación es divertida'));
+
+const longestWordLengthReduce = string => {
+    const longestWord = string.split(' ').reduce((prev, next) => prev.length < next.length ? next : prev);
+    return longestWord.length
+}
+
+console.log(longestWordLengthReduce('Hola cómo estás'));
+console.log(longestWordLengthReduce('La programación es divertida'));

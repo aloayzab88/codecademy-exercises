@@ -133,7 +133,23 @@ class CD extends Media {
     }
 
     set songs(value) {
-        Array.isArray(value) ? this._songs = value : console.log('songs must be an array.');
+        if (!Array.isArray(value)) {
+            console.log('songs must be an array.');
+            return ;
+        }
+
+        value.every(item => typeof item === 'string' && item.trim() !== '' ? this._songs = value : console.log('song items must be strings'))
+    }
+
+    shuffle() {
+        const shuffleSongs = []
+        let songsCopy = [...this.songs];
+        for (let i = songsCopy.length - 1; i >= 0; i--) {
+            const index = Math.floor(Math.random() * (i + 1));
+            shuffleSongs.push(songsCopy[index]);
+            songsCopy.splice(index,1);
+        }
+        return shuffleSongs;
     }
 }
 
@@ -153,3 +169,24 @@ csm.addRating(5);
 const { title, author, pages, ratings, isCheckedOut } = csm;
 
 console.log(`${title} is manga written and ilustrated by ${author}, it has ${pages} pages and a rating of ${csm.getAverageRating()} based on ${ratings.length} reviews. Currently ${isCheckedOut ? 'is not' : 'is'} available for check out.`);
+
+const meteora = new CD(
+    'Linkin Park', 
+    'Meteora', 
+    [10, 10, 10], 
+    ['Foreword',
+    'Don\'t Stay',
+    'Somewhere I Belong',
+    'Lying from You',
+    'Hit the Floor',
+    'Easier to Run',
+    'Faint',
+    'Figure.09',
+    'Breaking the Habit',
+    'From the Inside',
+    'Nobody\'s Listening',
+    'Session',
+    'Numb']
+);
+
+console.log(meteora.shuffle()); 

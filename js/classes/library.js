@@ -37,7 +37,7 @@ class Media {
             return;
         }
 
-        value.some(item => isNaN(item)) ? console.log('rating items must be numbers') : this._ratings = value;
+        value.every(item => (typeof item === 'number' && item > 0 && item < 6)) ? this._ratings = value : console.log('rating items must be numbers between 1 and 5.');
     }
 
     getAverageRating() {
@@ -49,8 +49,8 @@ class Media {
     }
 
     addRating(rating) {
-        if (isNaN(rating) || rating === '') {
-            console.log('Added rating must be a number.');
+        if (isNaN(rating) || rating === '' || rating < 0 || rating > 6) {
+            console.log('Added rating must be a number between 1 and 5.');
             return;
         }
 
@@ -145,10 +145,10 @@ console.log(mediaTest.isCheckedOut);
 mediaTest.addRating('5');
 console.log(mediaTest.getAverageRating());
 
-const csm = new Book('Tatsuki Fujimoto', 'Chainsaw Man', 1200, [10,10,10,10])
+const csm = new Book('Tatsuki Fujimoto', 'Chainsaw Man', 1200, [5,5,5,5])
 
 csm.toggleCheckOutStatus();
-csm.addRating(10);
+csm.addRating(5);
 
 const { title, author, pages, ratings, isCheckedOut } = csm;
 

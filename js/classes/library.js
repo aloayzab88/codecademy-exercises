@@ -9,6 +9,8 @@ class Media {
         // use setters to validate data on new instance
         this.title = title;
         this.ratings = ratings;
+
+        catalog.list.push(this);
     }
 
     get title() {
@@ -56,7 +58,6 @@ class Media {
 
         this.ratings.push(+rating);
     }
-
 }
 
 class Book extends Media {
@@ -153,6 +154,18 @@ class CD extends Media {
     }
 }
 
+class Catalog {
+    constructor() {
+        this._list = []
+    }
+
+    get list() {
+        return this._list;
+    }
+}
+
+const catalog = new Catalog();
+
 
 const mediaTest = new Media('', [5,5,5]);
 console.log(mediaTest);
@@ -190,3 +203,5 @@ const meteora = new CD(
 );
 
 console.log(meteora.shuffle()); 
+
+console.log(catalog.list);
